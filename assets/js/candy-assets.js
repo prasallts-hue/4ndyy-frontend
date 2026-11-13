@@ -1,0 +1,13 @@
+(function(){"use strict";
+const root="/imagens/icons/";
+const icons={home:"home.svg",discover:"discover.svg",avatarShop:"avatar-shop.svg",create:"create.svg",currency:"currency.svg",search:"search.svg",notifications:"notifications.svg",messages:"messages.svg",friends:"friends.svg",settings:"settings.svg",menu:"menu.svg",close:"close.svg",games:"games.svg"};
+const classMap={"icon-nav-menu":"menu","icon-close":"close","icon-search":"search","icon-bell":"notifications","icon-notification":"notifications","icon-chat":"messages","icon-friends":"friends","icon-settings":"settings","icon-robux":"currency","icon-logo":"logoMark","icon-logo-r":"logoMark","icon-games":"games","icon-home":"home","icon-avatar":"avatarShop","icon-catalog":"avatarShop","icon-develop":"create"};
+function setIcon(el,name){const file=icons[name];if(!file)return;el.dataset.candyIcon=name;el.classList.add("candy-icon-"+name);el.style.backgroundImage="url('"+root+file+"')";el.setAttribute("aria-hidden","true");}
+function apply(rootNode){if(!rootNode||rootNode.nodeType!==1&&rootNode!==document)return;
+Object.keys(classMap).forEach(cls=>{if(rootNode.matches&&rootNode.matches("."+cls))setIcon(rootNode,classMap[cls]);rootNode.querySelectorAll&&rootNode.querySelectorAll("."+cls).forEach(el=>setIcon(el,classMap[cls]));});
+(rootNode.querySelectorAll?rootNode.querySelectorAll("[data-candy-icon]"):[]).forEach(el=>{const name=el.dataset.candyIcon;if(icons[name])setIcon(el,name);});
+}
+window.CANDY_ASSETS={icons,iconPath:name=>icons[name]?root+icons[name]:null,refresh:()=>apply(document)};
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",()=>apply(document),{once:true});else apply(document);
+new MutationObserver(records=>records.forEach(r=>r.addedNodes.forEach(n=>{if(n.nodeType===1)apply(n);}))).observe(document.documentElement,{childList:true,subtree:true});
+})();
