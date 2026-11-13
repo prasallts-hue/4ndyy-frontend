@@ -21,3 +21,4 @@ html[data-candy-theme] .candy-icon-menu{width:22px;height:22px}
 html[data-candy-theme] .candy-icon-close{width:16px;height:16px}
 html[data-candy-theme] .candy-icon-currency{width:18px;height:18px}
 @media(max-width:767px){html[data-candy-theme] .candy-tagline{display:none}html[data-candy-theme] .candy-brand-logo{width:96px}}
+\nhtml[data-candy-theme] [data-candy-icon]::before{content:none!important;display:none!important}\n
