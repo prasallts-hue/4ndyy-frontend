@@ -1,0 +1,1 @@
+window.CANDY_CONFIG={apiBaseUrl:"",credentials:"include",endpoints:{login:null,register:null,logout:null,currentUser:null}};
