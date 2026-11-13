@@ -1,24 +1,25 @@
-:root{--cbg:#fff;--csurface:#fff;--csoft:#fff1f7;--ctext:#402333;--cmuted:#916f80;--cborder:#f3c9dc;--cpink:#e85b9b;--cstrong:#c9367c;--cshadow:0 8px 28px rgba(159,52,104,.10);--candy-pink:#e85b9b;--candy-pink-dark:#c9367c}
-:root[data-candy-theme=dark]{color-scheme:dark;--cbg:#1d0d17;--csurface:#2a1220;--csoft:#38182a;--ctext:#fff4f9;--cmuted:#d5a9bf;--cborder:#63304a;--cpink:#f18ab9;--cstrong:#ffacd0;--cshadow:0 8px 28px rgba(0,0,0,.24)}
-html[data-candy-theme] body,html[data-candy-theme] #wrap,html[data-candy-theme] #container-main,html[data-candy-theme] .content{background:var(--cbg)!important;color:var(--ctext)!important}
-html[data-candy-theme] #header,html[data-candy-theme] #navigation-container,html[data-candy-theme] .navbar,html[data-candy-theme] .navbar-fixed-top{background:var(--csurface)!important;border-color:var(--cborder)!important}
-html[data-candy-theme] #navigation-container{border-bottom:2px solid var(--cborder)!important}
-html[data-candy-theme] a{color:var(--cstrong)!important}
-html[data-candy-theme] .nav-menu-title,html[data-candy-theme] .navbar a,html[data-candy-theme] #header a{color:var(--ctext)!important}
-html[data-candy-theme] .nav-menu-title:hover,html[data-candy-theme] .navbar a:hover{color:var(--cstrong)!important}
-html[data-candy-theme] input,html[data-candy-theme] textarea,html[data-candy-theme] select{background:var(--csurface)!important;color:var(--ctext)!important;border:1px solid var(--cborder)!important}
-html[data-candy-theme] button,html[data-candy-theme] .btn,html[data-candy-theme] input[type=submit]{background:var(--cpink)!important;border-color:var(--cpink)!important;color:#fff!important;border-radius:8px}
-html[data-candy-theme] .btn-default,html[data-candy-theme] .btn-secondary{background:var(--csoft)!important;color:var(--cstrong)!important;border-color:var(--cborder)!important}
-html[data-candy-theme] .navbar-brand{display:inline-flex!important;align-items:center;gap:10px;min-width:112px}
-html[data-candy-theme] .candy-brand-logo{display:block;width:104px;height:30px;object-fit:contain}
-html[data-candy-theme] .candy-tagline{display:inline-block;color:var(--cstrong);font:600 11px/1.2 Arial,sans-serif;white-space:nowrap;letter-spacing:.15px}
-html[data-candy-theme] .candy-theme-toggle{position:fixed;z-index:99999;right:18px;bottom:18px;padding:10px 15px;border:1px solid var(--cborder)!important;border-radius:999px;background:var(--cstrong)!important;color:#fff!important;box-shadow:var(--cshadow);font:600 13px/1.2 Arial,sans-serif;cursor:pointer}
-html[data-candy-theme] .modal-content,html[data-candy-theme] .well,html[data-candy-theme] .thumbnail,html[data-candy-theme] .panel,html[data-candy-theme] .dropdown-menu,html[data-candy-theme] .popover,html[data-candy-theme] .card{background:var(--csurface)!important;color:var(--ctext)!important;border-color:var(--cborder)!important}
-html[data-candy-theme] .text-muted{color:var(--cmuted)!important}
+/* CANDY visual identity — pink + white */
+:root{color-scheme:light;--candy-bg:#fff;--candy-surface:#fff;--candy-soft:#fff0f6;--candy-pink:#ed78ad;--candy-pink-strong:#d94d91;--candy-pink-deep:#b83273;--candy-text:#392431;--candy-muted:#8d7180;--candy-border:#f2c6da;--candy-shadow:0 8px 28px rgba(190,70,126,.12)}
+html[data-candy-theme="dark"]{color-scheme:dark;--candy-bg:#1d1018;--candy-surface:#291622;--candy-soft:#3b1d2d;--candy-pink:#ee8db8;--candy-pink-strong:#f3a3c6;--candy-pink-deep:#ffb8d5;--candy-text:#fff4f8;--candy-muted:#d4afc0;--candy-border:#62364c;--candy-shadow:0 8px 28px rgba(0,0,0,.28)}
+html[data-candy-theme] body,html[data-candy-theme] #wrap,html[data-candy-theme] #container-main,html[data-candy-theme] #content,html[data-candy-theme] .content,html[data-candy-theme] #container,html[data-candy-theme] #main-content{background:var(--candy-bg)!important;color:var(--candy-text)!important}
+html[data-candy-theme] #header,html[data-candy-theme] #navigation-container,html[data-candy-theme] #navbar,html[data-candy-theme] .navbar,html[data-candy-theme] .navbar-fixed-top,html[data-candy-theme] .nav-content{background:var(--candy-surface)!important;color:var(--candy-text)!important;border-color:var(--candy-border)!important;box-shadow:0 2px 12px rgba(190,70,126,.07)!important}
+html[data-candy-theme] #navigation-container{border-bottom:2px solid var(--candy-border)!important}
+html[data-candy-theme] #left-navigation-container,html[data-candy-theme] .left-navigation,html[data-candy-theme] .left-col-list,html[data-candy-theme] .nav-content-inner{background:var(--candy-surface)!important;color:var(--candy-text)!important;border-color:var(--candy-border)!important}
+html[data-candy-theme] .dark-theme,html[data-candy-theme] .dark-theme .navbar,html[data-candy-theme] .dark-theme .nav-content,html[data-candy-theme] .dark-theme #navigation-container{background-color:var(--candy-surface)!important;color:var(--candy-text)!important}
+html[data-candy-theme] a,html[data-candy-theme] .text-link{color:var(--candy-pink-deep)!important}
+html[data-candy-theme] .navbar a,html[data-candy-theme] #header a,html[data-candy-theme] #navigation-container a,html[data-candy-theme] #left-navigation-container a,html[data-candy-theme] .nav-menu-title{color:var(--candy-text)!important}
+html[data-candy-theme] a:hover,html[data-candy-theme] .navbar a:hover{color:var(--candy-pink-strong)!important}
+html[data-candy-theme] input,html[data-candy-theme] textarea,html[data-candy-theme] select,.input-field{background:var(--candy-surface)!important;color:var(--candy-text)!important;border:1px solid var(--candy-border)!important}
+html[data-candy-theme] button,html[data-candy-theme] .btn-primary,html[data-candy-theme] .btn-success,html[data-candy-theme] .btn-call-to-action,html[data-candy-theme] input[type=submit],html[data-candy-theme] .btn-growth{background:var(--candy-pink-strong)!important;border-color:var(--candy-pink-strong)!important;color:#fff!important;border-radius:8px!important}
+html[data-candy-theme] .btn-default,html[data-candy-theme] .btn-secondary,html[data-candy-theme] .btn-control{background:var(--candy-soft)!important;color:var(--candy-pink-deep)!important;border-color:var(--candy-border)!important}
+html[data-candy-theme] .modal-content,html[data-candy-theme] .well,html[data-candy-theme] .thumbnail,html[data-candy-theme] .panel,html[data-candy-theme] .dropdown-menu,html[data-candy-theme] .popover,html[data-candy-theme] .card,html[data-candy-theme] .game-card,html[data-candy-theme] .game-card-container{background:var(--candy-surface)!important;color:var(--candy-text)!important;border-color:var(--candy-border)!important}
+html[data-candy-theme] hr{border-color:var(--candy-border)!important}
+html[data-candy-theme] .text-muted,html[data-candy-theme] .small,html[data-candy-theme] .font-caption-header{color:var(--candy-muted)!important}
+html[data-candy-theme] .navbar-brand{display:inline-flex!important;align-items:center;gap:12px;min-width:120px;max-width:260px}
+html[data-candy-theme] .candy-brand-logo{display:block!important;width:112px;height:34px;object-fit:contain}
+html[data-candy-theme] .candy-tagline{display:inline-block!important;color:var(--candy-pink-deep)!important;font:700 11px/1.2 Arial,sans-serif;white-space:nowrap;letter-spacing:.2px}
 html[data-candy-theme] .icon-logo,html[data-candy-theme] .icon-logo-r{display:none!important}
 html[data-candy-theme] [data-candy-icon]{display:inline-block!important;width:20px;height:20px;background-repeat:no-repeat;background-position:center;background-size:contain;color:transparent!important;font-size:0!important;vertical-align:middle}
-html[data-candy-theme] .candy-icon-menu{width:22px;height:22px}
-html[data-candy-theme] .candy-icon-close{width:16px;height:16px}
-html[data-candy-theme] .candy-icon-currency{width:18px;height:18px}
-@media(max-width:767px){html[data-candy-theme] .candy-tagline{display:none}html[data-candy-theme] .candy-brand-logo{width:96px}}
-\nhtml[data-candy-theme] [data-candy-icon]::before{content:none!important;display:none!important}\n
+html[data-candy-theme] [data-candy-icon]::before{content:none!important;display:none!important}
+html[data-candy-theme] .candy-theme-toggle{position:fixed;z-index:999999;right:18px;bottom:18px;padding:10px 15px;border:1px solid var(--candy-border)!important;border-radius:999px;background:var(--candy-pink-strong)!important;color:#fff!important;box-shadow:var(--candy-shadow);font:700 13px/1.2 Arial,sans-serif;cursor:pointer}
+@media(max-width:767px){html[data-candy-theme] .candy-tagline{display:none!important}html[data-candy-theme] .candy-brand-logo{width:100px;height:30px}}
