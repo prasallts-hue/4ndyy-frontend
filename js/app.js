@@ -7,7 +7,7 @@
   function pad(n){return(n<10?"0":"")+n}
   document.querySelectorAll(".gen button").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll(".gen button").forEach(function(x){x.classList.remove("on")});b.classList.add("on");gender=b.dataset.g})});
   function fail(e){var f=e.fields&&Object.keys(e.fields).map(function(k){return e.fields[k]}).join(" ");$("msg").textContent=f||e.message||"Something went wrong."}
-  function enter(u){user=u;location.hash="home"}
+  function enter(u){user=u;location.hash="home"}\n  $("demo-entry").onclick=function(){A.preview().then(enter)};
   function show(){ $("who").hidden=!user;if(user)$("who").textContent=user.username+" · "+(user.kandies||0)+" K$" }
   $("f").onsubmit=function(ev){
     ev.preventDefault();var u=$("su-user").value.trim(),p=$("su-pass").value,p2=$("su-pass2").value,m=$("m").selectedIndex,d=$("d").selectedIndex,yi=$("y").selectedIndex;
