@@ -21,7 +21,7 @@
     return null;
   }
   async function req(method,path,o){
-    o=o||{};if(!C.API_BASE)return demo(path,o);
+    o=o||{};if(load(DEMO_KEY)&&(path===C.ENDPOINTS.me||path===C.ENDPOINTS.catalog))return demo(path,o);if(!C.API_BASE)return demo(path,o);
     var url=new URL(C.API_BASE.replace(/\/$/,"")+path);
     Object.keys(o.query||{}).forEach(function(k){var v=o.query[k];if(v!==""&&v!=null)url.searchParams.set(k,v)});
     var h={Accept:"application/json"},init={method:method,headers:h};
