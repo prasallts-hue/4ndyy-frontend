@@ -39,7 +39,8 @@
     signup:function(b){return req("POST",C.ENDPOINTS.signup,{body:b}).then(session)},
     login:function(b){return req("POST",C.ENDPOINTS.login,{body:b}).then(session)},
     logout:function(){return req("POST",C.ENDPOINTS.logout).catch(function(){}).then(function(){save(C.TOKEN_KEY,null)})},
-    me:function(){return req("GET",C.ENDPOINTS.me).then(function(u){return u&&u.user?u.user:u})},\n    preview:function(){var u={username:"Kandi Guest",kandies:250,kix:120,isDemo:true};save(DEMO_KEY,JSON.stringify(u));return Promise.resolve(u)},
+    me:function(){return req("GET",C.ENDPOINTS.me).then(function(u){return u&&u.user?u.user:u})},
+    preview:function(){var u={username:"Kandi Guest",kandies:250,kix:120,isDemo:true};save(DEMO_KEY,JSON.stringify(u));return Promise.resolve(u)},
     catalog:function(q){return req("GET",C.ENDPOINTS.catalog,{query:q})}
   };
 })();
