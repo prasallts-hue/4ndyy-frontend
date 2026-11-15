@@ -30,5 +30,5 @@
   window.addEventListener("resize",function(){mv(act)});
   function ensure(){return user?Promise.resolve(user):A.me().then(function(u){user=u;return u}).catch(function(){return null})}
   function route(){var h=location.hash.slice(1),app=h==="home"||h==="catalog";$("v-landing").hidden=app;$("v-app").hidden=!app;["home","catalog"].forEach(function(n){$("p-"+n).hidden=n!==h});$("n-catalog").classList.toggle("on",h==="catalog");if(!app){mv(act);return}ensure().then(function(u){if(!u&&h==="home"){location.hash="";return}show();if(h==="catalog"&&!cat0){cat0=true;load(true)}})}
-  window.addEventListener("hashchange",route);route();
+  window.addEventListener("hashchange",route);route();if(new URLSearchParams(location.search).get("demo")==="1")A.preview().then(enter);
 })();
