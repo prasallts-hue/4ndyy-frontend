@@ -11,7 +11,9 @@ Frontend estático do Project Kandi, inspirado nas interfaces sociais e de jogos
 - `imagens/` — SVGs locais usados no site; troque os arquivos mantendo os nomes para substituir imagens.
 
 ## Modo demonstração
-Por padrão, `API_BASE` fica vazio em `js/config.js`. Nesse modo, cadastro/login são simulados localmente no navegador e o catálogo aparece vazio. Isso permite testar a interface, mas não cria contas reais.
+O botão **Explore Demo** abre a área interna sem criar conta ou chamar o backend. A sessão local de demonstração usa o perfil `Kandi Guest`, saldos fictícios de KANBUX/KIX e itens de catálogo de exemplo. É apenas uma prévia visual; nenhum dado é enviado ou salvo no servidor. O botão Log Out encerra a prévia e retorna à tela inicial.
+
+Por padrão, `API_BASE` fica vazio em `js/config.js`. Nesse modo, cadastro/login também são simulados localmente e não criam contas reais.
 
 ## Backend
 Para conectar a API, defina `API_BASE` e confira se o backend implementa as rotas configuradas:
