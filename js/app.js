@@ -9,7 +9,7 @@
   function fail(e){var f=e.fields&&Object.keys(e.fields).map(function(k){return e.fields[k]}).join(" ");$("msg").textContent=f||e.message||"Something went wrong."}
   function enter(u){user=u;location.hash="home"}
   $("demo-entry").onclick=function(){A.preview().then(enter)};
-  function show(){ $("who").hidden=!user;if(user)$("who").textContent=user.username+" · "+(user.kandies||0)+" K$" }
+  function show(){ $("who").hidden=!user;if(user)$("who").textContent=user.username+(user.isDemo?" · DEMO":"");$("kandi-balance").textContent=user?(user.kandies||0):0;$("kix-balance").textContent=user?(user.kix||0):0 }
   $("f").onsubmit=function(ev){
     ev.preventDefault();var u=$("su-user").value.trim(),p=$("su-pass").value,p2=$("su-pass2").value,m=$("m").selectedIndex,d=$("d").selectedIndex,yi=$("y").selectedIndex;
     var e=!/^[A-Za-z0-9_]{3,20}$/.test(u)?"Username must be 3-20 letters, numbers or underscores.":p.length<8?"Password must be at least 8 characters.":p!==p2?"Passwords do not match.":(!m||!d||!yi)?"Please enter your birthday.":"";
